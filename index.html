@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Femboy Locator</title>
+        <meta
+            name="description"
+            content="See where your VRChat friends are, live, from your Android phone. Made by Deltro."
+        />
+        <meta property="og:title" content="Femboy Locator" />
+        <meta property="og:description" content="See where your VRChat friends are, live, from your Android phone." />
+        <meta property="og:image" content="icon.png" />
+        <link rel="icon" href="icon.png" />
+        <style>
+            :root {
+                --bg: #0f0d14;
+                --surface: #1a1622;
+                --border: #2c2537;
+                --text: #f4f0fa;
+                --muted: #a99fb8;
+                --accent: #ff5fa2;
+                --accent-2: #a77bff;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                background:
+                    radial-gradient(60rem 30rem at 85% -10%, rgba(167, 123, 255, 0.22), transparent 70%),
+                    radial-gradient(50rem 30rem at -10% 10%, rgba(255, 95, 162, 0.18), transparent 70%), var(--bg);
+                color: var(--text);
+                font:
+                    16px/1.55 system-ui,
+                    -apple-system,
+                    'Segoe UI',
+                    Roboto,
+                    sans-serif;
+            }
+            main {
+                max-width: 1040px;
+                margin: 0 auto;
+                padding: 48px 16px 32px;
+            }
+            .hero {
+                text-align: center;
+            }
+            .hero img.icon {
+                width: 96px;
+                height: 96px;
+                border-radius: 24px;
+                box-shadow: 0 12px 40px rgba(255, 95, 162, 0.35);
+            }
+            h1 {
+                font-size: clamp(2.2rem, 7vw, 3.4rem);
+                line-height: 1.1;
+                margin: 20px 0 8px;
+            }
+            .tagline {
+                color: var(--muted);
+                font-size: 1.15rem;
+                margin: 0 auto 28px;
+                max-width: 32rem;
+            }
+            .download {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                padding: 16px 28px;
+                border-radius: 16px;
+                background: linear-gradient(135deg, var(--accent), var(--accent-2));
+                color: #fff;
+                font-weight: 700;
+                font-size: 1.1rem;
+                text-decoration: none;
+                box-shadow: 0 10px 30px rgba(255, 95, 162, 0.35);
+            }
+            .buttons {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+            .download.secondary {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                box-shadow: none;
+            }
+            .platforms {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px 16px;
+                margin-top: 18px;
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+            .platforms a {
+                color: var(--text);
+            }
+            .download:hover {
+                filter: brightness(1.08);
+            }
+            .download svg {
+                width: 22px;
+                height: 22px;
+            }
+            .fine {
+                color: var(--muted);
+                font-size: 0.9rem;
+                margin-top: 12px;
+            }
+            .fine a {
+                color: var(--muted);
+            }
+            .shots {
+                display: flex;
+                gap: 16px;
+                margin: 48px -16px 0;
+                padding: 0 16px 8px;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                justify-content: safe center;
+            }
+            .shots img {
+                flex: none;
+                width: 220px;
+                border-radius: 24px;
+                border: 1px solid var(--border);
+                scroll-snap-align: center;
+            }
+            h2 {
+                font-size: 1.5rem;
+                margin: 56px 0 16px;
+            }
+            .features {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+                gap: 12px;
+            }
+            .card {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: 16px;
+                padding: 18px;
+            }
+            .card h3 {
+                margin: 0 0 6px;
+                font-size: 1.05rem;
+            }
+            .card p {
+                margin: 0;
+                color: var(--muted);
+            }
+            ol {
+                padding-left: 1.3rem;
+                margin: 0;
+            }
+            ol li {
+                margin: 8px 0;
+            }
+            ol li::marker {
+                color: var(--accent);
+                font-weight: 700;
+            }
+            footer {
+                border-top: 1px solid var(--border);
+                margin-top: 56px;
+                padding-top: 20px;
+                color: var(--muted);
+                font-size: 0.85rem;
+            }
+            footer strong {
+                color: var(--text);
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <section class="hero">
+                <img class="icon" src="icon.png" alt="" />
+                <h1>Femboy Locator</h1>
+                <p class="tagline">See where your VRChat friends are, live, on your phone or your PC.</p>
+                <div class="buttons">
+                <a
+                    class="download"
+                    href="https://github.com/SNUFFLES-boop/Femboy-Locator-Releases/releases/download/android-latest/FemboyLocator.apk"
+                >
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <path d="M12 3v12" />
+                        <path d="m7 10 5 5 5-5" />
+                        <path d="M5 21h14" />
+                    </svg>
+                    Download for Android
+                </a>
+                <a class="download secondary" href="https://github.com/SNUFFLES-boop/Femboy-Locator-Releases/releases/latest/download/FemboyLocator_Setup_x64.exe">
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                    >
+                        <path d="M12 3v12" />
+                        <path d="m7 10 5 5 5-5" />
+                        <path d="M5 21h14" />
+                    </svg>
+                    Download for Windows
+                </a>
+                </div>
+                <div class="platforms">
+                    <span>macOS: <a href="https://github.com/SNUFFLES-boop/Femboy-Locator-Releases/releases/latest/download/FemboyLocator_macOS_AppleSilicon.dmg">Apple Silicon</a> ·
+                        <a href="https://github.com/SNUFFLES-boop/Femboy-Locator-Releases/releases/latest/download/FemboyLocator_macOS_Intel.dmg">Intel</a></span>
+                    <span>Linux: <a href="https://github.com/SNUFFLES-boop/Femboy-Locator-Releases/releases/latest/download/FemboyLocator_Linux_x64.AppImage">x64</a> ·
+                        <a href="https://github.com/SNUFFLES-boop/Femboy-Locator-Releases/releases/latest/download/FemboyLocator_Linux_arm64.AppImage">arm64</a></span>
+                    <span>Windows: <a href="https://github.com/SNUFFLES-boop/Femboy-Locator-Releases/releases/latest/download/FemboyLocator_Windows_Portable.zip">portable zip</a></span>
+                </div>
+                <p class="fine">
+                    Free · Android 8 or newer · Windows 10 or newer ·
+                    <a href="https://github.com/SNUFFLES-boop/Femboy-Locator-Releases/releases">All releases</a>
+                </p>
+            </section>
+
+            <div class="shots">
+                <img src="locations.jpg" alt="Friends grouped by the instance they're in" loading="lazy" />
+                <img src="friends.jpg" alt="Friend list with favorites first" loading="lazy" />
+                <img src="avatars.jpg" alt="Avatar search results" loading="lazy" />
+                <img src="customize.jpg" alt="The app with a custom background" loading="lazy" />
+            </div>
+
+            <h2>What it does</h2>
+            <div class="features">
+                <div class="card">
+                    <h3>Live locations</h3>
+                    <p>Friends grouped by world and instance, updated live as they move around.</p>
+                </div>
+                <div class="card">
+                    <h3>Friends &amp; feed</h3>
+                    <p>Who's online, what changed, and a feed of joins, status and avatar changes.</p>
+                </div>
+                <div class="card">
+                    <h3>Avatar search</h3>
+                    <p>Search public avatars and wear them straight from your phone.</p>
+                </div>
+                <div class="card">
+                    <h3>Unlimited saved avatars</h3>
+                    <p>Save as many avatars as you want into your own lists, with backup and import.</p>
+                </div>
+                <div class="card">
+                    <h3>Invites &amp; notifications</h3>
+                    <p>Join friends, accept friend requests and answer invites on the go.</p>
+                </div>
+                <div class="card">
+                    <h3>Make it yours</h3>
+                    <p>Themes, accent colours, backgrounds and your own photo. Updates install from inside the app.</p>
+                </div>
+            </div>
+
+            <h2>How to install</h2>
+            <div class="card">
+                <h3>Android</h3>
+                <ol>
+                    <li>Tap <strong>Download for Android</strong> on your phone.</li>
+                    <li>
+                        Open <code>FemboyLocator.apk</code> when it finishes. If Android asks, allow your browser to
+                        install apps.
+                    </li>
+                    <li>
+                        Log in with your VRChat account. You sign in directly with VRChat, and your password is never
+                        saved.
+                    </li>
+                    <li>
+                        Later updates show up inside the app: open your profile and tap <strong>Update now</strong>.
+                    </li>
+                </ol>
+            </div>
+            <div class="card" style="margin-top: 12px">
+                <h3>Windows</h3>
+                <ol>
+                    <li>Click <strong>Download for Windows</strong> and run <code>FemboyLocator_Setup_x64.exe</code>.</li>
+                    <li>
+                        If Windows SmartScreen says it protected your PC, click <strong>More info</strong> →
+                        <strong>Run anyway</strong>. That shows for new apps that aren't code-signed yet.
+                    </li>
+                    <li>Log in with your VRChat account. The app updates itself when a new version is out.</li>
+                </ol>
+            </div>
+
+            <footer>
+                <p>Made by <strong>Deltro</strong>.</p>
+                <p>
+                    Femboy Locator is not endorsed by VRChat and does not reflect the views or opinions of VRChat or
+                    anyone officially involved in producing or managing VRChat properties. VRChat and all associated
+                    properties are trademarks or registered trademarks of VRChat Inc.
+                </p>
+            </footer>
+        </main>
+    </body>
+</html>
